@@ -137,7 +137,7 @@ export class StackdriverStatsExporter implements StatsEventListener {
     });
   }
 
-  private reportMetricUploadError(err) {
+  private reportMetricUploadError(err: Error) {
     if (typeof this.onMetricUploadError === 'function') {
       this.onMetricUploadError(err);
     }
